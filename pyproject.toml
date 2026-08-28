@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blocktracker"
+version = "0.3.0"
+description = "Detector visual y buscador de secuencias de ruleta"
+requires-python = ">=3.11"
+dependencies = [
+  "mss>=9.0,<11",
+  "numpy>=1.26,<3",
+  "opencv-python>=4.9,<5",
+  "onnxruntime>=1.29,<2",
+  "PySide6-Essentials>=6.8,<7",
+  "rapidocr>=3.9,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+blocktracker-detect = "blocktracker.cli:main"
+blocktracker-search = "blocktracker.search_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

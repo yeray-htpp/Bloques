@@ -1,0 +1,9 @@
+mss<11,>=9.0
+numpy<3,>=1.26
+opencv-python<5,>=4.9
+onnxruntime<2,>=1.29
+PySide6-Essentials<7,>=6.8
+rapidocr<4,>=3.9
+
+[dev]
+pytest<9,>=8

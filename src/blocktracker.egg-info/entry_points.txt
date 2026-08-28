@@ -1,0 +1,3 @@
+[console_scripts]
+blocktracker-detect = blocktracker.cli:main
+blocktracker-search = blocktracker.search_cli:main
